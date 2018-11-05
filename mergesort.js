@@ -73,9 +73,9 @@ function mergeSort(arr){
     if(arr.length === 1){
         return arr;
     }
-    let arr = split(arr);
-    let left = arr[0];
-    let right = arr[1];
-    return merge(split(left), split(right));
+    let arrayFromSplit = split(arr);
+    let left = arrayFromSplit[0];
+    let right = arrayFromSplit[1];
+    return merge(mergeSort(left), mergeSort(right));
 }
 
