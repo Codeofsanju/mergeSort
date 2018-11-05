@@ -7,8 +7,8 @@ describe('split', function() {
 
 describe('merge', function() {
     it('able to merge 2 sorted arrays into one sorted array', function(){
-        expect(merge([-40,-100,1],[50,5,6])).toEqual([-100,-40,1,5,6,50]);  // even number case
-        expect(merge([2,4],[23,56,3])).toEqual([2,3,4,23,56]);
+        expect(merge([-100, -40, 1],[5,6,50])).toEqual([-100,-40,1,5,6,50]);  // even number case
+        expect(merge([2,4],[3,23,56])).toEqual([2,3,4,23,56]);
     })  
 })
 describe('mergSort', function() {

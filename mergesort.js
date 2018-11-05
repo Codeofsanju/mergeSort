@@ -12,9 +12,46 @@ function split(arr){
 }
 
 /* PSEUDOCODE
+  the function receives two arrays, left and right sides
+  result = [];
+  loop over the left side array
+  loop over right side array separately
+  compare left index to right index if left is < right index, push left index into result
+  else push right index into result
+
 
 */
 
-function merge(leftSide, rightSide) {
+
+function merge(left, right) {
+  let result = [];
   
+  iterateLeft = 0;
+  iterateRight = 0;
+
+  while (iterateLeft < left.length && iterateRight < right.length) {
+    if (left[iterateLeft] < right[iterateRight]) {
+      result.push(left[iterateLeft++]);
+    } else {
+      result.push(right[iterateRight++]);
+    }
+  }
+
+  // while (iterateLeft < left.length) {
+  //   result.push(left[iterateLeft++]);
+  // }
+  for (let i = 0; i < left.length; i++) {
+    if (i < left.length) {
+      result.push(left[i]);
+    }
+  }
+
+  while (iterateRight < right.length) {
+    result.push(right[iterateRight++]);
+  }
+
+  console.log(result);
+  return result;
 }
+
+
