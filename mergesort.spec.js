@@ -11,7 +11,7 @@ describe('merge', function() {
         expect(merge([2,4],[3,23,56])).toEqual([2,3,4,23,56]);
     })  
 })
-describe('mergSort', function() {
+describe('mergeSort', function() {
     
 
 });

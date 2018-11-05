@@ -67,4 +67,15 @@ function merge(left, right) {
   return result;
 }
 
+//split: base case = arrays of length 1
+
+function mergeSort(arr){
+    if(arr.length === 1){
+        return arr;
+    }
+    let arr = split(arr);
+    let left = arr[0];
+    let right = arr[1];
+    return merge(split(left), split(right));
+}
 
