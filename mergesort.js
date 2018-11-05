@@ -28,6 +28,8 @@ function merge(left, right) {
   
   iterateLeft = 0;
   iterateRight = 0;
+  // let i = 0 
+  // let j = 0
 
   while (iterateLeft < left.length && iterateRight < right.length) {
     if (left[iterateLeft] < right[iterateRight]) {
@@ -37,14 +39,25 @@ function merge(left, right) {
     }
   }
 
-  // while (iterateLeft < left.length) {
-  //   result.push(left[iterateLeft++]);
+  // for(i = 0; i<left.length && j<right.length ;i++){
+  //   if(left[i] < right[j]){
+  //     result.push(left[i]);
+  //   }else{
+  //     result.push(right[j])
+  //   }
+  //   j++
   // }
-  for (let i = 0; i < left.length; i++) {
-    if (i < left.length) {
-      result.push(left[i]);
-    }
+
+  while (iterateLeft < left.length) {
+    result.push(left[iterateLeft++]);
   }
+  // for (i; i < left.length; i++) {
+  //   result.push(left[i]);
+  // }
+
+  // for(j ; j< right.length; j++){
+  //   result.push(left[j]);
+  // }
 
   while (iterateRight < right.length) {
     result.push(right[iterateRight++]);
